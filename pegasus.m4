@@ -14,7 +14,7 @@ include(hippocrene.m4)
 divert
 
     define(`qp', `j3')dnl
-	qp-format(`%s' kronos)dnl
+	qp-format(`%s', kronos)dnl
 	Fn(qp)
 	Cn(qp)
 	Gn(qp)
