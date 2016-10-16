@@ -2,7 +2,7 @@ divert(-1)
 
 include(hippocrene.m4)
 
-  define(`kronos', `syscmd(`date --rfc-3339=ns')')
+  define(`kronos', `syscmd(`date +%s')')
   define(`Fn', `substr(helicon(`$1'), 25, 35)substr(helicon(`$1'), 0, 25)')
   define(`Cn', `substr(helicon(`$1'),  0, 60)substr(helicon(`$1'), 0,  0)')
   define(`Gn', `substr(helicon(`$1'), 35, 25)substr(helicon(`$1'), 0, 35)')
@@ -13,7 +13,7 @@ include(hippocrene.m4)
 
 divert
 
-    define(`qp', `j3')dnl
+    define(`qp', `j36')dnl
 	qp-format(`%s', kronos)dnl
 	Fn(qp)
 	Cn(qp)
@@ -24,7 +24,7 @@ divert
 	Bn(qp)
 
 
-    pushdef(`qp', `k1')dnl
+    pushdef(`qp', `k15')dnl
 	qp-format(`%s', kronos)dnl
 	Fn(qp)
 	Cn(qp)
